@@ -7,6 +7,7 @@
 :root{
   --text-color: #8D8D8D;
   --violet: #4200FF;
+  --violet2:  #0d0724;
   --turquoise: #00E0FF;
   --turquoise2: #02A4FF;
   --dark-bg: #0F0038;
@@ -189,7 +190,7 @@ a{
   top: 3rem;
 }
 .social i{
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   background: linear-gradient(0deg, rgba(26, 26, 26, 0.425) 10%, var(--dark-title) 80%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -223,6 +224,7 @@ a{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  padding: 0 2rem;
 }
 .title{
   color: var(--dark-title);
@@ -259,18 +261,21 @@ a{
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: var(--height-header);
-  gap: 1rem;
+  padding-top: 3.5rem;
 }
 .skills .title{
-  margin-bottom: 0rem;
+  margin-bottom: 1rem;
+}
+.skills .paragraph{
+  margin-bottom: 1rem;
 }
 .cards{
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(7rem,1fr));
-  column-gap: 2rem;
+  column-gap: 1rem;
   row-gap: 1rem;
   padding: 0 1rem;
+  margin-bottom: 2rem;
 }
 .card{
   background-color: var(--violet);
@@ -294,13 +299,16 @@ a{
   color: var(--dark-title);
   font-size: 1.1rem;
   font-weight: 500;
+  margin-bottom: 1rem;
 }
 .subtitle::after{
   content: '';
   display: block;
   width: 10rem;
   height: 3px;
-  background-color: var(--violet);
+  background-color: var(--violet2);
+  background-color: rgb(0,224,255);
+  background: linear-gradient(90deg, rgba(0,224,255,1) 0%, rgba(66,0,255,1) 80%);
   border-radius: 3px;
 }
 .minicards{
@@ -312,9 +320,8 @@ a{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: var(--violet);
+  background-color: var(--violet2);
   border-radius: 1rem;
-  box-shadow: 5px 5px 15px 0px rgb(17, 2, 31);
   height: 1.2rem;
 }
 .minicard__img{
@@ -331,17 +338,16 @@ a{
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: var(--height-header);
-  gap: 1rem;
+  padding-top: 4rem;
 }
 .projects__container .title{
-  margin-bottom: 0rem;
+  margin-bottom: 2rem;
 }
 .project__main{
   border-radius: 1rem;
   display: flex;
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   width: clamp(15rem,90vw,40rem);
   height: clamp(10rem,35vh,25rem);
 }
@@ -416,40 +422,23 @@ a{
   gap: 1rem;
 }
 .project__card{
+  background-color: #4200FF;
+  background: linear-gradient(135deg, rgb(11, 1, 26) 50%, var(--violet) 350%);
   display: flex;
   height: 5rem;
-  position: relative;
-}
-.project__back{
-  backdrop-filter: blur(1px);
-  height: 100%;
-  padding: .5rem 1rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
+  border-radius: .8rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .title--card{
   color: var(--dark-title);
-  font-size: 1rem;
-  grid-area: title;
-  margin-right: auto;
-  position: relative;
-}
-.title--card:after{
-  background-color: var(--violet);
-  content: '';
-  display: block;
-  height: 1.2rem;
-  position: absolute;
-  left: -10%;
-  top: 10%;
-  width: 4px;
+  font-size: .8rem;
+  font-weight: 600;
+  padding-bottom: .2rem;
+  text-align: center;
+  width: 100%;
 }
 .project__button--card{
-  grid-area: button;
-  height: 20%;
-  position: absolute;
-  right: .5rem;
-  bottom: .5rem;
+  margin-left: 0;
 }
